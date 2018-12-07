@@ -1,0 +1,7 @@
+bin/
+#Library files for Spring Framework
+lib/
+.settings/
+.classpath
+.project
+*.class
