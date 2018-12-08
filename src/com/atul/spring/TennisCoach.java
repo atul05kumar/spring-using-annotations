@@ -1,12 +1,15 @@
 package com.atul.spring;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
+//@Scope("prototype")
 public class TennisCoach implements Coach {
 
 	//field injection using reflection
@@ -14,6 +17,16 @@ public class TennisCoach implements Coach {
 	@Qualifier("happyFortuneService")
 	private FortuneService theFortuneService;
 	
+	//do my startup stuff
+	@PostConstruct
+	public void doMyStartupStuff() {
+		System.out.println(">> TennisCoach : Inside doMyStartupStuff()");
+	}
+	//do my cleanup stuff
+	@PreDestroy
+	public void doMyCleanupStuff() {
+		System.out.println(">> TennisCoach : Inside doMyCleanupStuff()");
+	}
 	/*Autowiring via a constructor
 	@Autowired
 	public TennisCoach(FortuneService happyFortune) {
