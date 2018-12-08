@@ -1,6 +1,7 @@
 package com.atul.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -8,6 +9,7 @@ public class TennisCoach implements Coach {
 
 	//field injection using reflection
 	@Autowired
+	@Qualifier("happyFortuneService")
 	private FortuneService theFortuneService;
 	
 	/*Autowiring via a constructor
