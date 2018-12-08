@@ -21,6 +21,9 @@ public class AnnotationDemoApp {
 		//call a method on the bean
 		System.out.println(myCricketCoach.getDailyWorkout());
 		
+		//call the method via constructor injection
+		System.out.println(theCoach.getDailyFortune());
+		
 		//close the contest
 		context.close();
 	}

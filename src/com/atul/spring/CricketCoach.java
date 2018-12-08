@@ -10,4 +10,9 @@ public class CricketCoach implements Coach {
 		return "Practice batting in the nets!";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		return "Cricket Fortune!";
+	}
+
 }
