@@ -9,6 +9,7 @@
 
 <!-- Defining beans using XML file is a old way. Modern way is using annotations -->
 	<context:component-scan base-package="com.atul.spring"></context:component-scan>
+	<context:property-placeholder location="classpath:sport.properties"/>
 
 </beans>
 
